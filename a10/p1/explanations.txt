@@ -1,0 +1,15 @@
+All C++ libraries are inside the namespace std and if that is not included
+then we cannot get input for string, or create string variables or output 
+it either. Every String related functionality stops working. We can either
+use namespace std, or we can write std:: before every string related 
+piece of code. If any C++ libraries were used then they would stop working 
+as well
+
+If we remove the prefix, we get the error that name is not declared within 
+the scope. The name variable is a variable declared within the Critter Class.
+Without the prefix, the function is not referring to that Class and therefore
+cannot access the name variable. One possible solution could be to add a second
+parameter to the functions, which would be c.hunger or c.name, depending on the
+function and then setting its value to the other parameter which is the newname
+or newhunger. But it is easier to just reference the function to the class
+using the Critter:: prefix.
